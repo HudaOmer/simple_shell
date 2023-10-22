@@ -7,7 +7,7 @@
 #include <string.h>
 
 
-
+extern char **environ;
 
 typedef struct data
 {
@@ -25,4 +25,11 @@ typedef struct data
 /*functions.c*/
 void prompt(data_t *data);
 void parse(data_t *data);
+void execute(data_t *data);
+
+/*functions_1.c*/
+char *_strcpy(char *dest, char *src);
+int _strcmp(char *s1, char *s2);
+int _getenv(char *envp[]);
+
 #endif
